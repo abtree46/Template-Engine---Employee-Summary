@@ -11,7 +11,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 const { prependOnceListener } = require("process");
 
-function promptUser(response) {
+function promptUser() {
     return inquirer.prompt([
     {
         type: "list",
@@ -75,7 +75,7 @@ function promptUser(response) {
         },
 
         type: "input",
-        name: "officeNum",
+        name: "officeNumber",
         message: "Office number:",
         validate: async (input) => {
             if (isNaN(input)) {
@@ -86,12 +86,12 @@ function promptUser(response) {
     },
     {
         type: "list",
-        name: "addAnother",
+        name: "anotherOne",
         message: "Another team member?",
         choices: ["Yes", "No"],
         validate: async (input) => {
             if (input === "Yes") {
-               return promptUser();
+               return prompt;
             }
             return true;
         }
@@ -99,7 +99,7 @@ function promptUser(response) {
 ]);
 }
 promptUser();
-//render();
+render();
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
