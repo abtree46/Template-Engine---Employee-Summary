@@ -12,6 +12,7 @@ so that I have quick access to emails and GitHub profiles
 ### Small Wins!
 > Although I didn't meet the functionality requirements, I did manage to get all tests to pass and to get obtain user input in ways that I had struggled with before.
 ### Photo of Passed Tests
+![PassedTestsPhoto](passed.png)
 
 
 ### Video of Comand Line App
